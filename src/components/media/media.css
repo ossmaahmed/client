@@ -1,0 +1,43 @@
+.media-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(128, 128, 128, 0.75);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-wrapper .media {
+  position: relative;
+  width: 960px;
+  height: 540px;
+}
+
+.close-container {
+  position: absolute;
+  top: calc(100% - 690px);
+  left: calc(100% - 240px);
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  border-radius: 50%;
+  z-index: 10000;
+  color: white;
+  cursor: pointer;
+}
+
+.close-video {
+  color: red;
+  background-color: var(--grey-color);
+  width: fit-content;
+  text-align: center;
+  padding: 12px 12px;
+  border-radius: 50%;
+}

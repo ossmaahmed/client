@@ -1,0 +1,77 @@
+.board {
+  margin: 30px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+
+}
+
+.board table {
+  display: flex;
+  flex-direction: column;
+}
+
+.board table thead {
+  border-bottom:  2px solid var(--main-color);
+}
+
+.board tr {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.board th,
+.board td {
+  flex: 1;
+}
+
+.board table tbody {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(250, 250, 250);
+  border-radius: 8px;
+  margin-top: 4px;
+}
+
+.board tbody tr {
+  margin: 4px 0;
+  padding: 8px 0px;
+  border-radius: 16px;
+}
+
+.board tbody tr .media-data:hover {
+  cursor: pointer;
+}
+
+.board tbody tr:hover {
+  background-color:  rgb(240, 240, 240);
+}
+
+.board h5 {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.board p {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.need-help,
+.no-help {
+  display: inline-block;
+  padding: 6px;
+  border-radius: 8px;
+  min-width: 100px;
+  color: white;
+  cursor: pointer;
+}
+
+.need-help {
+  background-color: var(--main-color);
+}
+
+.no-help {
+  background-color: var(--green-color);
+}

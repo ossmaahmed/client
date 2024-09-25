@@ -1,0 +1,15 @@
+.loadingContainer {
+  display: flex;
+  height: 100vb;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--main-color);
+}
+
+.loadingLogo {
+  color: white;
+  font-weight: bold;
+  font-size: 38px;
+  margin-bottom: 16px;
+}

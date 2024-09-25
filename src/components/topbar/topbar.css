@@ -1,0 +1,88 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.topbarContainer {
+  height: 75px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: var(--main-color);
+  z-index: 9999;
+  justify-content: space-between;
+  padding: 0px 24px;
+}
+
+.topbarLeft {
+  flex: 1;
+  background-color: white;
+  border-radius: 16px;
+}
+
+.topbarLeft .logo {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.topbarLeft .logo img {
+  height: 60px;
+}
+
+.topbarRight {
+  flex: 9;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.topbarRight .searchbar {
+  display: flex;
+  align-items: center;
+  background-color: #fcfdfd;
+  height: 50px;
+  width: 300px;
+  border-radius: 20px;
+  padding: 0px 16px;
+}
+
+.topbarRight .searchbar .searchIcon {
+  font-size: 28px !important;
+  color: var(--main-color);
+  margin-right: 12px;
+}
+
+.topbarRight .searchbar input.searchInput {
+  border: none;
+  outline: none;
+  color: black;
+  font-size: 14px;
+  width: 100%;
+}
+
+.topbarRight .searchbar input.searchInput::placeholder {
+  color: var(--main-color);
+}
+
+.username {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.username span {
+  color: black;
+  margin-right: 8px;
+}
+
+.topbarRight img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  margin-left: 12px;
+}

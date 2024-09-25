@@ -1,0 +1,40 @@
+.values {
+  padding: 18px 30px;
+  padding-left: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.values .val-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  min-width: 150px;
+  padding: 25px 20px;
+  margin-bottom: 8px;
+  margin-left: 32px;
+  border-radius: 5px;
+}
+
+.values .val-box div {
+  width: 100%;
+}
+
+.values .val-box h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 8px 0 10px 0;
+}
+
+
+.values .val-box span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.values .val-box .gradient {
+  height: 3px;
+  border-radius: 20px;
+}

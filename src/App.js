@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, Navigate } from "react-router-dom";
+
+import Login from "./pages/login/Login";
+import Dashboard from "./pages/dashboard/Dashboard";
+import { useContext, useEffect } from "react";
+import { AuthContext } from "./context/Auth/AuthContext";
+import { getUser } from "./apiCalls";
+import Loading from "./pages/loading/Loading";
+
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
+  let { user, token, error, dispatch } = useContext(AuthContext);
+  token = token || localStorage.getItem("token");
+
+  useEffect(() => {
+    if (token) getUser(token, dispatch, toast);
+  }, [token, dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {!user && !error && token ? (
+        <Loading />
+      ) : (
+        <Routes>
+          <Route
+            path="/"
+            element={user ? <Dashboard /> : <Navigate to={"/login"} />}
+          />
+          <Route
+            path="/users"
+            element={user ? <Dashboard /> : <Navigate to={"/login"} />}
+          />
+          <Route
+            path="/login"
+            element={user ? <Navigate to={"/"} /> : <Login />}
+          />
+        </Routes>
+      )}
+      <ToastContainer />
+    </>
   );
 }
 

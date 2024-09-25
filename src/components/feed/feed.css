@@ -1,0 +1,46 @@
+.feed {
+  flex: 6;
+}
+
+.feedWrapper {
+  padding: 20px;
+}
+
+.i-name {
+  color: #444a53;
+  font-size: 24px;
+  font-weight: 700;
+  padding-left: 30px;
+}
+
+.values .val-box:nth-child(1) h3 {
+  color: #fe7e55;
+}
+
+.values .val-box:nth-child(2) h3 {
+  color: #44c1b9;
+}
+
+.values .val-box:nth-child(3) h3 {
+  color: #6b4acf;
+}
+
+.values .val-box:nth-child(4) h3 {
+  color: #ca41d7;
+}
+
+.values .val-box:nth-child(1) .gradient {
+  background: linear-gradient(45deg, #e87958, #eda54c);
+}
+
+.values .val-box:nth-child(2) .gradient {
+  background: linear-gradient(45deg, #47b4ab, #80e47c);
+}
+
+.values .val-box:nth-child(3) .gradient {
+  background: linear-gradient(45deg, #896fe3, #49c4e9);
+}
+
+.values .val-box:nth-child(4) .gradient {
+  background: linear-gradient(45deg, #b740c3, #97a5e8);
+}
